@@ -26,22 +26,13 @@ print "Bot Is Now Online"
 def start(m):
 
  s = bot.get_chat_member(channel, m.chat.id)
-
  mn = redis.sismember("bans", m.from_user.id)
-
- if mn == False:
 
   if s.status == "member" or s.status == "creator" or s.status == "administrator":
 
-   markup = types.InlineKeyboardMarkup()
-
    a = types.InlineKeyboardButton("🇮🇷فارسی🇮🇷", callback_data='pars')
 
-   b = types.InlineKeyboardButton("🇬🇧English🇬🇧", callback_data='eng')
-
    markup.add(a, b)
-
-   bot.send_message(m.chat.id,"🇮🇷لطفا زبان خود با انتخاب کنید :\n➖➖➖➖➖➖➖➖\n🇬🇧Please select your language :", reply_markup=markup)
 
   else:
 
