@@ -1,31 +1,16 @@
 #!/usr/bin/python
-
 # -*- coding: utf-8 -*-
-
 import requests,redis,sys
-
 from tempfile import TemporaryFile
-
 from telebot import TeleBot
-
 from telebot import types
-
 from multiprocessing import Process, freeze_support
-
 reload(sys)
-
 sys.setdefaultencoding("utf-8")
-
-
 # Magic Team 
-
 # Channel : @AmmeKadeh
-
-
 redis = redis.StrictRedis(host='localhost', port=6379, db=0)
-
 token = "499501117:AAFqmJCVBAZTxytlRJrcq8kyOkvzAfTAlgw" #Token Bot
-
 admin = 338283194 #ID Admin
 
 channel = -1001145231133 #Channel ID
