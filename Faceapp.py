@@ -25,7 +25,7 @@ print "Bot Is Now Online"
 
 def start(m):
 
- s = bot.get_chat_member(channel, m.chat.id)
+ dd = bot.get_chat_member(channel, m.chat.id)
  mn = redis.sismember("bans", m.from_user.id)
 
   if s.status == "member" or s.status == "creator" or s.status == "administrator":
